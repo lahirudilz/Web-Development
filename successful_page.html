@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful</title>
+    <style>
+        html,
+        body {
+            background-image: linear-gradient(to bottom right, rgb(230, 230, 250), rgb(175, 175, 241));
+            height: 100%;
+        }
+
+        .message {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            background-color: white;
+            transform: translateX(-50%) translateY(-50%);
+            width: 40%;
+            height: 50%;
+            border-radius: 10px;
+            border: none;
+            box-shadow: 10px 10px 5px rgb(94, 100, 102);
+        }
+
+        .message h3 {
+            display: flex;
+            justify-content: center;
+            font-size: xx-large;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: green;
+        }
+
+        .s-img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 250px;
+            height: 250px;
+        }
+
+        .message a {
+            display: grid;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none;
+            align-items: center;
+            border: none;
+            border-radius: 6px;
+            background-color: rgb(61, 10, 109);
+            background-image: linear-gradient(to bottom right, rgb(86, 12, 116), rgb(172, 3, 121));
+            color: white;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            width: 200px;
+            height: 50px;
+            transition: all 1s linear;
+        }
+
+        .message a:hover {
+            background-image: linear-gradient(to bottom right, rgb(86, 12, 116), rgb(70, 3, 50));
+        }
+
+        .d-link {
+            color: #9e9d9d;
+        }
+
+        .d-link:hover {
+            color: #ffffff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="message">
+        <h3>Payment Successful!</h3>
+        <img src="images/verified.gif" class="s-img">
+        <a href="buyproducts.html">Back to Buy Products</a>
+    </div>
+    <div class="editor">
+        <a class="d-link" href="editor-thamindu.html">Page Developer</a>
+    </div>
+</body>
+
+</html>

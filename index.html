@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewPort" content="width=device-width, initial-scale=1">
+        <title>Web Development</title>
+        
+        <!--link to the external css file-->
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/home.css">
+
+        <!--link to the icons-->
+        <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    </head>
+    <body>
+        <!--header-->
+        <header id="navbar">
+            <a href="index.html" class="logo"><img src="images/logo.png" width="100px"></a>
+            <nav class="nav-links">
+                <ul class="navlist">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="buyproducts.html">Buy Products</a></li>
+                    <li><a href="quiz.html">Quiz</a></li>
+                    <li><a href="comment.html">Comments</a></li>
+                    <li><a href="details.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <a href="#"><i class='bx bx-search'></i></a>
+                <div class="bx bx-menu" id="opt-icon"></div>
+            </div>
+        </header>
+        <!--Main-->
+        <section class="main" id="main">
+            <div class="main-text">
+                <h1>Explore & <br>Enjoy The True <br><span> Nature </span><br>Around Us...</h1>
+                <br>
+                <a href="explore.html" class="btn">Browse Now<i class="bx bxs-right-arrow"></i></a>
+            </div>
+            <div class="main-img">
+                <img src="images/img.jpg">
+            </div>
+        </section>
+        <!--counrty description-->
+        <section class="description">
+            <h1>Sri Lanka</h1>
+            <p>
+                Sri Lanka, officialy the Democratic Socialist Republic of Sri Lanka, is an island located in the South Asia.
+                It is situated in the Indian Ocean, southwest of the Bay Of Bengal. Sri Lanka has a rich cultural and historical heritage, dating back over 2,500 years.<span id="pause">...</span><span id="extract" hidden>
+                Sri Lanka, also known as the "Pearl of the Indian Ocean, is a stunningly beautiful country with a rich history, diverse culture, and natural wonders. Sri Lanka has some of the most picturesque beaches in the world. 
+                The pristine coastline is dotted with palm trees, golden sands, and turquoise waters. Popular beaches include Unawatuna, Mirissa, and Hikkaduwa.
+                The country's lush green tea plantations, cascading waterfalls, and misty hills are a photographer's paradise. The scenic beauty of places like Ella, Nuwara Eliya, and Kandy is simply mesmerizing.
+                It is home to a rich diversity of wildlife, including leopards, elephants, monkeys, and a variety of bird species. The country's national parks and reserves, such as Yala National Park and Udawalawe National Park, offer opportunities for wildlife safaris.
+                Sri Lanka's ancient ruins, such as the Sigiriya Rock Fortress and the Dambulla Cave Temple, showcase the country's rich history and architectural heritage.
+                The country is also known for its many religious sites, including the Temple of the Tooth Relic in Kandy, the Anuradhapura and Polonnaruwa ancient cities, and the Adam's Peak pilgrimage site.
+                Sri Lanka's cuisine is renowned for its spicy curries, fresh seafood, and exotic fruits. The country is also known for its production of spices, such as cinnamon, cardamom, and pepper.
+                Overall, Sri Lanka's beauty lies in its natural wonders, rich history, cultural heritage, and warm hospitality.
+                </span>
+            </p>
+            <button onclick="displayMore();" id="btnMore">Read more</button>
+        </section>
+        <!--image gallery-->
+        <section>
+            <div class="container">
+                <div class="gallery">
+                    <div class="set">
+                        <img id="img1" src="images/img1.jpg" onmouseover="showDetail('txt1', 'Tea Plantation in Nuwara Eliya');" onmouseout="hideDetail('txt1');">
+                        <label id="txt1" for="img1"></label>
+                        <img id="img2" src="images/img2.jpg" onmouseover="showDetail('txt2', 'Gangaramaya Temple');" onmouseout="hideDetail('txt2');">
+                        <label id="txt2" for="img2"></label>
+                        <img id="img3" src="images/img3.jpg" onmouseover="showDetail('txt3', 'Galle Face Green');" onmouseout="hideDetail('txt3');">
+                        <label id="txt3" for="img3"></label>
+                        <img id="img4" src="images/img4.jpg" onmouseover="showDetail('txt4', 'Sigiriya');" onmouseout="hideDetail('txt4');">
+                        <label id="txt4" for="img4"></label>
+                        <img id="img5" src="images/img5.jpg" onmouseover="showDetail('txt5', 'Sri Dalada Maligawa(The Temple of the Sacred Tooth Relic)');" onmouseout="hideDetail('txt5');">
+                        <label id="txt5" for="img5"></label>
+                        <img id="img6" src="images/img6.jpg" onmouseover="showDetail('txt6', 'Aluthgama Seaside');" onmouseout="hideDetail('txt6');">
+                        <label id="txt6" for="img6"></label>
+                    </div>
+                    <div class="set">
+                        <img id="img7" src="images/img7.jpg" onmouseover="showDetail('txt7', 'Kandy Lake');" onmouseout="hideDetail('txt7');">
+                        <label id="txt7" for="img7"></label>
+                        <img id="img8" src="images/img8.jpg" onmouseover="showDetail('txt8', 'Tea Plantation in Haputhale');" onmouseout="hideDetail('txt8');">
+                        <label id="txt8" for="img8"></label>
+                        <img id="img9" src="images/img9.jpg" onmouseover="showDetail('txt9', 'Yala National Park');" onmouseout="hideDetail('txt9');">
+                        <label id="txt9" for="img9"></label>
+                        <img id="img10" src="images/img10.jpg" onmouseover="showDetail('txt10', 'Pinnawala Elephant Orphanage');" onmouseout="hideDetail('txt10');">
+                        <label id="txt10" for="img10"></label>
+                        <img id="img11" src="images/img11.jpg" onmouseover="showDetail('txt11', 'Ella');" onmouseout="hideDetail('txt11');">
+                        <label id="txt11" for="img11"></label>
+                        <img id="img12" src="images/img12.jpg" onmouseover="showDetail('txt12', 'Ruwanweli Maha Seya');" onmouseout="hideDetail('txt12');">
+                        <label id="txt12" for="img12"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--links for other pages-->
+        <section>
+            <div class="site-links">
+                <img src="images/Sigiriya.jpg">
+                <a href="sigiriya.html">1. Sigiriya <br> <span>Explore more details...</span></a>
+            </div>
+            <div class="site-links">
+                <img src="images/Kandy.jpg">
+                <a href="content-page.html">2. Kandy <br> <span>Explore more details...</span></a>
+            </div>
+        </section>
+        <br>
+        <hr color="ash">
+        <!--contact info-->
+        <section class="contact" id="contact">
+            <div class="contact-info">
+                <div class="contact-text">
+                    <h2>Contact Us</h2>
+                    <div class="social">
+                        <a href="https://www.facebook.com/" target="_blank"><i class="bx bxl-facebook"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="bx bxl-twitter"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank"><i class="bx bxl-instagram"></i></a>
+                        <a href="https://www.google.com/" target="_blank"><i class="bx bxl-google"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank"><i class="bx bxl-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="details">
+                    <div class="main-detail">
+                        <a href="#"><i class="bx bxs-location-plus"></i>25/B, Arthur's Lane, Colombo 05</a>
+                    </div>
+                    <div class="main-detail">
+                        <a href="#"><i class='bx bxs-envelope'></i>bariston.webdev@gmail.com</a>
+                    </div>
+                    <div class="main-detail">
+                        <a href="#"><i class="bx bx-mobile"></i>(+94)119847445</a>
+                    </div>
+                </div>
+        </section>
+        <!--page-up button-->
+        <a href="#" class="scroll">
+            <i class="bx bx-up-arrow-alt"></i>
+        </a>
+        <!--developer link-->
+        <a class="d-link" href="editor-lahiru.html">Page Developer</a>
+         <!--footer-->
+        <footer>
+            <a href="">Powered by lkT Software Solutions</a>
+            <p>©️Copyright 2023 All Rights Reserved.</p>
+        </footer>
+        <!--link to the javascript files-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="js/index.js"></script>
+        <script src="js/home.js"></script>
+    </body>
+</html>

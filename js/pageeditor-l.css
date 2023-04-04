@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    margin: 10px;
+    line-height: 1.5;
+    color: #fffdfd;
+    background-image: linear-gradient(to bottom right, rgb(22, 54, 73), rgb(9, 6, 26));
+    text-align: center;
+}
+
+
+h2 {
+    font-family: "Perpetua Titling MT";
+}
+
+
+.details {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.explain {
+    margin: 0 auto;
+    
+    border-radius: 20px;
+    width: 90%;
+    padding: 15px;
+}
+
+.explain h3 {
+    font-family: "Monotype Corsiva";
+    font-size: 27px;
+    color: bisque;
+}
+
+.explain dl {
+    font-family: "dubai";
+    font-size: 20px;
+}
+
+.explain dl dt {
+    margin: 5px;
+    transition: all 1s ease;
+}
+
+.explain dl dt:hover {
+    color: rgb(190, 135, 14);
+}
+
+.link {
+    background-color: #ddd;
+    border: none;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 16px;
+    transition: all 1s ease;
+  }
+
+  .link:hover {
+    background-color: cornflowerblue;
+    color: white;
+  }
+
+  hr {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    height: 3px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, rgb(179, 179, 172), rgb(247, 224, 183));
+  }
+

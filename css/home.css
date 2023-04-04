@@ -1,0 +1,156 @@
+.main{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    gap: 20px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 800px;
+}
+
+.main-img img{
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+    border-radius: 1rem;
+}
+
+.main-img img:hover{
+    transform: scale(1.0) translateY(15px);
+    transition: all .30s ease;
+}
+
+.main-text h1{
+    font-size: var(--font-bg);
+    font-weight: 700;
+    line-height: 1.5;
+    margin-bottom: 3.5rem;
+    color: rgb(111, 0, 255);
+    border-left: solid 1px;
+    border-color: #e5aef3;
+    padding-left: 8px;
+}
+
+.main-text h1:hover{
+    transform: scale(1.1);
+    transition: all .25s ease;
+}
+
+.main-text span{
+    color: #f700ff;
+}
+
+.site-links{
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    gap: 30px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 900px;
+}
+
+.site-links img{
+    width: 100%;
+    height: 350px;
+    margin-top: 10px;
+    border-radius: 1rem;
+}
+
+.site-links img:hover{
+    transform: scale(1.0) translateX(-3px);
+    transition: all .40s ease;
+}
+
+.site-links a{
+    color: #fd746c;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: 3.5rem;
+
+}
+
+.site-links a:hover{
+    transform: scale(1.0) translateY(10px);
+    transition: all .25s ease;
+    color: chocolate;
+}
+
+.site-links span{
+    color: #e5aef3;
+    font-size: 18px;
+}
+
+.description{
+    padding: 10px 15% 60px;
+}
+
+.description p{
+    font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    font-size: 18px;
+    text-align: justify;
+    line-height: 2;
+    color: rgb(243, 203, 203);
+}
+
+.description li{
+    list-style: disc;
+    line-height: 2.5;
+}
+
+.description h1{
+    color: rgb(0, 164, 214);
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.description h1:hover{
+    border-bottom: solid 1px;
+    border-color: #008cff;
+    padding-bottom: 1px;
+    transition: all .30s ease;
+}
+
+#btnMore{
+    background-color: #FFFFFF;
+    border: 1px solid rgb(209,213,219);
+    border-radius: .5rem;
+    color: #111827;
+    font-family: "Inter var",ui-sans-serif,system-ui;
+    font-weight: 600;
+    padding: .5rem 1rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px 5px;
+}
+
+.container .gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container .gallery .set{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.container .gallery .set img{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.container .gallery .set img:hover{
+    transform: scale(1.0) translateX(-1px);
+    transition: all .50s ease;
+    box-shadow: #2878e0 0px 1px 20px;
+}

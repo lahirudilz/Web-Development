@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <title>About Us | Travelmania</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            list-style: none;
+            text-decoration: none;
+            scroll-behavior: smooth;
+            scroll-padding-top: 4rem;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            z-index: 2;
+            padding: 20px 15%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            transition: all .50s ease;
+        }
+
+        :root {
+            --col-main: #FF6600;
+            --col-second: #9e9d9d;
+            --col-txt: #ffffff;
+            --col-bg: #111111;
+            --col-other: #1f1f1f;
+
+            --font-bg: 48px;
+            --font-h2: 40px;
+            --font-p: 18px;
+        }
+
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            font-weight: 700;
+            color: var(--col-second);
+        }
+
+        .logo i {
+            margin-right: 10px;
+            color: #0033FF;
+        }
+
+        .navlist {
+            display: flex;
+
+        }
+
+        .navlist a {
+            font-weight: 600;
+            margin: 0px 20px;
+            color: var(--col-txt);
+            font-size: var(--font-p);
+            transition: all .50s ease;
+        }
+
+        .navlist a:hover {
+            color: var(--col-main);
+        }
+
+        .navlist a.active {
+            color: var(--col-main);
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            background: var(--col-main);
+            padding: 7px 14px;
+            border-radius: 20px;
+            box-shadow: #c77700 0px 1px 12px;
+        }
+
+        .nav-icons i {
+            font-size: 22px;
+            margin-right: 8px;
+            margin-left: 6px;
+            color: var(--col-bg);
+            transition: all .50s ease;
+        }
+
+        .nav-icons i:hover {
+            color: var(--col-txt);
+            transform: scale(1.0);
+        }
+
+        #opt-icon {
+            font-size: 28px;
+            z-index: 2;
+            cursor: pointer;
+            color: var(--col-bg);
+        }
+
+
+        body {
+            background: var(--col-bg);
+            color: var(--col-txt);
+        }
+
+        .container-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .body {
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            width: 50%;
+            margin: 0 10px;
+        }
+
+        .image {
+            display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 25px;
+        }
+
+        .overlay_thamindu {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #BC6C25;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+            border-radius: 25px;
+        }
+
+        .container:hover .overlay_thamindu {
+            width: 100%;
+        }
+
+        .overlay_lahiru {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #DDA15E;
+            overflow: hidden;
+            width: 100%;
+            height: 0;
+            transition: .5s ease;
+            border-radius: 25px;
+        }
+
+        .container:hover .overlay_lahiru {
+            height: 100%;
+        }
+
+        .overlay_kavindu {
+            position: absolute;
+            bottom: 0;
+            left: 100%;
+            right: 0;
+            background-color: #BC6C25;
+            overflow: hidden;
+            width: 0;
+            height: 100%;
+            transition: .5s ease;
+            border-radius: 25px;
+        }
+
+        .container:hover .overlay_kavindu {
+            width: 100%;
+            left: 0;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+
+            white-space: nowrap;
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+        }
+
+        .pill {
+            background-color: #ddd;
+            border: none;
+            color: black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 16px;
+
+        }
+
+
+        .header {
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+            padding: 20px 15%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: transparent;
+            transition: all .50s ease;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10px;
+            background-color: #161515;
+        }
+
+        footer a {
+            color: var(--col-main);
+        }
+
+        footer a:hover {
+            color: violet;
+            transition: all .50s ease;
+        }
+
+        .d-link {
+            color: #9e9d9d;
+        }
+
+        .d-link:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<header id="navbar">
+    <a href="index.html" class="logo"><img src="images/logo.png" width="100px"></a>
+    <nav class="nav-links">
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="buyproducts.html">Buy Products</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="comment.html">Comments</a></li>
+            <li><a href="details.html">About Us</a></li>
+        </ul>
+    </nav>
+    <div class="nav-icons">
+        <a href="#"><i class='bx bx-search'></i></a>
+        <div class="bx bx-menu" id="opt-icon"></div>
+    </div>
+</header>
+
+<body>
+
+    <h1>Our Team</h1>
+
+    <div class="container-wrapper">
+        <div class="container">
+            <img src="/images/thamindu.jpg" alt="Image 1" class="image" width="100px" height="100px">
+            <div class="overlay_thamindu">
+                <div class="text">
+                    <h2>Student 01</h2>
+
+                    <p>Thamindu Nethmina</p>
+                    <p>w1902034</p>
+                    <p>20212175</p>
+                    <p>thamindu.20212175@iit.ac.lk</p>
+
+                    <a href="https://web.facebook.com/thamindu.nethmina.1" class="facebook"><img
+                            src="/images/facebook.svg" height="40px" width="50px"></a>
+                    <a href="https://www.linkedin.com/in/thamindu-himansha-nethmina-0b9075239/" class="linkedin"><img
+                            src="\images\linkedin.svg" height="40px" width="50px"></a>
+                    <a href="https://github.com/ThaminduNethmina" class="github"><img src="/images/github.svg"
+                            height="40px" width="50px"></a>
+
+                    <a href="/editor-thamindu.html" ><button class="pill">Page Editor</button></a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="/images/lahiru.jpg" alt="Image 1" class="image" width="100px" height="100px">
+
+            <div class="overlay_lahiru">
+
+                <div class="text">
+                    <h2>Student 02</h2>
+                    <p>Lahiru Dilshan</p>
+                    <p>w1902035</p>
+                    <p>20212179</p>
+                    <p>lahiru.20212179@iit.ac.lk</p>
+                    <a href="https://web.facebook.com/" class="facebook"><img src="/images/facebook.svg" height="40px"
+                            width="50px"></a>
+                    <a href="https://www.linkedin.com/in/lahiru-dilshan-08b889235" class="linkedin"><img
+                            src="\images\linkedin.svg" height="40px" width="50px"></a>
+
+                    <a href="https://github.com/lahirudilz" class="github"><img src="/images/github.svg" height="40px"
+                            width="50px"></a>
+                            <a href="/editor-lahiru.html" ><button class="pill">Page Editor</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <img src="/images/kavindu.jpg" alt="Image 3" class="image">
+            <div class="overlay_kavindu">
+
+                <div class="text">
+                    <h2>Student 03</h2>
+                    <p>Kavindu Ranasinghe</p>
+                    <p>w1901993</p>
+                    <p>20212155</p>
+                    <p>kavindu.20212155@iit.ac.lk</p>
+                    <a href="https://web.facebook.com/" class="facebook"><img src="/images/facebook.svg" height="40px"
+                            width="50px"></a>
+                    <a href="https://www.linkedin.com/in/kavindu-ranasinghe-3737581b2/" class="linkedin"><img
+                            src="/images/linkedin.svg" height="40px" width="50px"></a>
+                    <a href="https://github.com/KavinduRanasinghe" class="github"><img src="/images/github.svg"
+                            height="40px" width="50px"></a>
+
+                            <a href="/pageeditor_kavindu.html" ><button class="pill">Page Editor</button></a>       
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<a class="d-link" href="pageeditor_kavindu.html">Page Developer</a>
+
+<footer>
+    <a href="">Powered by dkT Media</a>
+    <p>©️Copyright 2023 All Rights Reserved.</p>
+</footer>
+
+<script src="\js\details.js"></script>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewPort" content="width=device-width, initial-scale=1">
+    <title>Buy Products | Travelmania</title>
+
+    <link rel="stylesheet" href="css/buyproducts.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js"></script>
+</head>
+
+<body>
+
+    <header id="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" alt="logo" width="100"></a>
+        <nav class="nav-links">
+            <ul class="navlist">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyproducts.html">Buy Products</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="comment.html">Comments</a></li>
+                <li><a href="details.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <div class="bx bx-menu" id="opt-icon"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="products"></div>
+        <div class="myCart">
+            <div class="head">
+                <p>My Cart</p>
+            </div>
+            <div id="cartItems">Cart is empty!</div>
+            <div class="foot">
+                <h3>Total</h3>
+                <h2 id="total">LKR 0.00</h2>
+            </div>
+            <label for="fullname" style="color:azure">Full Name</label>
+            <input type="text" id="fullname" placeholder="Enter the Full Name" style="text-align: center;">
+            <br>
+            <label for="mail" style="color:azure">Email</label>
+            <input type="email" id="mail" placeholder="Enter the Email" style="text-align: center;">
+            <button id="btnCheckout">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <div id="modalCheckout" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1>Checkout</h1>
+            <div class="details">
+                <h3>Total</h3>
+                <h2 id="chkTotal">:</h2>
+            </div>
+            <div class="row">
+                <div class="col-75">
+                    <div class="form">
+                        <form action="successful_page.html" onsubmit="return validate()">
+                            <div class="row">
+                                <div class="col-50">
+                                    <h3>Billing Address</h3>
+                                    <label for="fname"><i class="fa fa-user"></i> Full Name<span
+                                            style="color:red">*</span></label>
+                                    <input type="text" id="fname" name="firstname" placeholder="N.V Thamindu Nethmina"
+                                        required>
+                                    <label for="email"><i class="fa fa-envelope"></i> Email<span
+                                            style="color:red">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="thamindu@example.com"
+                                        required>
+                                    <label for="adr"><i class="fa fa-address-card-o"></i> Address<span
+                                            style="color:red">*</span></label>
+                                    <input type="text" id="adr" name="address" placeholder="542 W. 15th Street"
+                                        required>
+                                    <label for="city"><i class="fa fa-institution"></i> City<span
+                                            style="color:red">*</span></label>
+                                    <input type="text" id="city" name="city" placeholder="Colombo" required>
+
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="province">Province<span style="color:red">*</span></label>
+                                            <input type="text" id="province" placeholder="Colombo" required>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="zip">Zip<span style="color:red">*</span></label>
+                                            <input type="number" id="zip" name="zip" placeholder="10000" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-50">
+                                    <h3>Payment</h3>
+                                    <label for="fname">Accepted Cards</label>
+                                    <div class="icon-container">
+                                        <i class="fa fa-cc-visa" style="color:navy;"></i>
+                                        <i class="fa fa-cc-amex" style="color:blue;"></i>
+                                        <i class="fa fa-cc-mastercard" style="color:red;"></i>
+                                        <i class="fa fa-cc-discover" style="color:orange;"></i>
+                                    </div>
+                                    <label for="cname">Name on Card<span style="color:red">*</span></label>
+                                    <input type="text" id="cname" name="cardname" placeholder="Thamindu Nethmina"
+                                        required>
+                                    <label for="ccnum">Credit card number<span style="color:red">*</span></label>
+                                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444"
+                                        required>
+                                    <label for="expmonth">Exp Month<span style="color:red">*</span></label>
+                                    <select id="expmonth" required>
+                                        <option value="" label="Select an option"></option>
+                                        <option value="JAN">JANUARY</option>
+                                        <option value="FEB">FEBRUARY</option>
+                                        <option value="MAR">MARCH</option>
+                                        <option value="APR">APRIL</option>
+                                        <option value="JUN">JUNE</option>
+                                        <option value="JUL">JULY</option>
+                                        <option value="AUG">AUGUST</option>
+                                        <option value="SEP">SEPTEMBER</option>
+                                        <option value="OCT">OCTOBER</option>
+                                        <option value="NOV">NOVEMBER</option>
+                                        <option value="DEC">DECEMBER</option>
+                                    </select>
+
+                                    <div class="row">
+                                        <div class="col-50">
+                                            <label for="expyear">Exp Year<span style="color:red">*</span></label>
+                                            <input type="number" id="expyear" name="expyear" placeholder="2027"
+                                                required>
+                                        </div>
+                                        <div class="col-50">
+                                            <label for="cvv">CVV<span style="color:red">*</span></label>
+                                            <input type="number" id="cvv" name="cvv" placeholder="000" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <input type="submit" value="Make the Payment" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="editor" style="width:100%;">
+
+        <a class="d-link" href="editor-thamindu.html">Page Developer</a>
+    </div>
+
+    <footer>
+        <a href="">Powered by dkT Media</a>
+        <p>©️Copyright 2023 All Rights Reserved.</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/buyproducts.js"></script>
+</body>
+
+</html>

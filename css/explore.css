@@ -1,0 +1,71 @@
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.gallery{
+    width: 100%;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 100px;
+}
+
+.container h2{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    color: violet;
+}
+
+.pic{
+    position: relative;
+    height: 270px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px lightslategrey;
+    cursor: pointer;
+}
+
+.pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.pic img:hover{
+    transform: scale(1.0) translateY(2px);
+}
+
+p{
+    margin-bottom: 70px;
+    font-size: 13px;
+}
+span{
+    color: darkorange;
+}
+
+#detail{
+    display: none;
+    font-size: 13px;
+    color: lightskyblue;
+}
+
+.pic:hover #detail{
+    display: inline;
+}
+
+.external{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.external a{
+    font-size: 22px;
+    color: khaki;
+}
+
+.external a:hover{
+    border-bottom: solid 1px;
+    border-color: chocolate;
+}

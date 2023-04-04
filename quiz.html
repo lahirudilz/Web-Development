@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz | Travelmania</title>
+
+    <link rel="stylesheet" href="\css\quiz.css">
+    <link rel="stylesheet" href="\css\quiz1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+
+<body>
+    <header id="navbar">
+        <a href="index.html" class="logo"><img src="images/logo.png" width="100"></a>
+        <nav class="nav-links">
+            <ul class="navlist">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="buyproducts.html">Buy Products</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="comment.html">Comments</a></li>
+                <li><a href="details.html">About Us</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="#"><i class='bx bx-search'></i></a>
+            <div class="bx bx-menu" id="opt-icon"></div>
+        </div>
+    </header>
+    <!-- Start Quiz Button -->
+
+    <div class="section">
+        <div class="quiz_start_button"><button>Start Quiz</button></div>
+
+        <!-- Info Box -->
+        <div class="rule_box">
+            <div class="rule_box_title">
+                <p>Rules</p>
+            </div>
+            <div class="rules">
+                <div class="rule">1. There are 10 questions</div>
+                <div class="rule">2. Each question gets 60 seconds.</div>
+                <div class="rule">3. You earn 10 points for each correct answer</div>
+            </div>
+            
+            <div class="button">
+                <button class="exit_button">Exit</button>
+                <button class="continue_button">Continue</button>
+            </div>
+        </div>
+
+        <!--Quiz box -->
+        <div class="quiz_box">
+            <header>
+                <div class="timer">
+                    <div class="time_text">Remaining Time</div>
+                    <div class="time_seconds">60</div>
+                </div>
+
+                <div id="question_counter">
+                </div>
+
+            </header>
+            <section>
+                <div class="question_txt">
+                </div>
+                <div class="answers_text">
+                </div>
+            </section>
+
+            <!-- Quiz Box Footer -->
+            <div class="footer">
+
+
+                <button class="next_quiz_button">Next</button>
+            </div>
+        </div>
+        <!-- Result Box -->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fas fa-crown"></i>
+            </div>
+            <div class="complete_text">
+                <p>Completed the Quiz !</p>
+            </div>
+            <div class="elapsedTime">
+            </div>
+
+            <div class="score_text">
+            </div>
+            <div class="button">
+                <button class="reattempt_button">Reattempt Quiz</button>
+                <button class="quit_button">Quit</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js\quiz.js"></script>
+
+
+</body>
+<a class="d-link" href="pageeditor_kavindu.html">Page Developer</a>
+
+
+
+
+</html>
